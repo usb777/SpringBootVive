@@ -12,18 +12,15 @@ import com.song.project203.model.Song;
 
 @Controller
 public class HomeController {
-	
-	
+
 	@GetMapping("/songform")
-	public String loadFormPage(Model model)
-	{
+	public String loadFormPage(Model model) {
 		model.addAttribute("song", new Song());
 		return "songform";
 	}
-	
+
 	@PostMapping("/songform")
-	public String loadFromPage(@ModelAttribute Song song, Model model)
-	{
+	public String loadFromPage(@ModelAttribute Song song, Model model) {
 		model.addAttribute("song", song);
 		return "confirmsong";
 	}
