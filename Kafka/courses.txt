@@ -1,0 +1,5 @@
+Apache Kafka 101 for Beginners Course Trailer
+https://www.youtube.com/watch?v=j4bqyAMMb7o&list=PLa7VYi0yPIH0KbnJQcMv5N9iW8HkZHztH
+
+PluralSight: Getting Started with Apache Kafka
+https://app.pluralsight.com/course-player?clipId=e1be1909-1f17-4717-80c6-86bd98aed084
