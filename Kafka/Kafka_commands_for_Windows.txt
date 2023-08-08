@@ -1,0 +1,14 @@
+zookeeper-server-start.bat config\zookeeper.properties
+
+kafka-server-start.bat config\server.properties
+
+kafka-topics.bat --create --topic tutorialspedia --bootstrap-server localhost:9092
+
+kafka-topics.bat --list --bootstrap-server localhost:9092
+
+
+
+kafka-console-producer --broker-list localhost:9092 --topic myfirst
+
+
+kafka-console-consumer.bat --bootstrap-server 127.0.0.1:9092 --topic myfirst --from-beginning
