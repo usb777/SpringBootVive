@@ -3,3 +3,5 @@ https://www.baeldung.com/spring-cloud-stream-kafka-avro-confluent
 https://www.confluent.io/blog/schema-registry-avro-in-spring-boot-application-tutorial/
 
 https://stackoverflow.com/questions/63044704/using-schema-registry-from-confluent-with-avro-and-kafka-in-spring-boot-applicat
+
+https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153/ch04.html
