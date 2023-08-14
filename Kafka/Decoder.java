@@ -1,3 +1,4 @@
+//https://stackoverflow.com/questions/8298308/how-to-encode-decode-kafka-messages-using-avro-binary-encoder
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.message.MessageAndMetadata;
