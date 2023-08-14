@@ -1,0 +1,2 @@
+22:31:55.220 [main] ERROR io.confluent.kafka.schemaregistry.client.rest.RestService - Failed to send HTTP request to endpoint: http://localhost:8080/subjects/topic1-value/versions
+java.net.ConnectException: Connection refused: connect
