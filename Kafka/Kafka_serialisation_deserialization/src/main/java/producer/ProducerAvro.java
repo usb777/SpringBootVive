@@ -29,8 +29,8 @@ public class ProducerAvro {
 
 // Your event object
         GenericRecord avroEvent = new GenericData.Record(avroSchema);
-        avroEvent.put("field1", "value134");
-        avroEvent.put("field2", 42);
+        avroEvent.put("field1", "Dzmitry");
+        avroEvent.put("field2", 40);
 
 // Serialize the Avro-encoded event
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
