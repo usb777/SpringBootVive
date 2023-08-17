@@ -1,0 +1,19 @@
+Key and Value Serialization:
+Both the key and the value of a Kafka message can be serialized and deserialized using different formats. 
+The choice of serialization format depends on the use case, data complexity, and any schema management requirements. Common serialization formats used in Kafka are Avro, JSON, and more.
+
+Key Deserialization:
+When consuming Kafka messages, the key of each message can be deserialized using a specific deserializer.
+The key deserializer is responsible for converting the serialized key back into its original format.
+This is important because consumers often use the key for various purposes like routing messages to specific partitions or for performing lookups.
+
+Value Deserialization:
+Similarly, the value of each Kafka message needs to be deserialized using a value deserializer. 
+The value deserializer converts the serialized value back into its original format. 
+The content of the value can hold the actual data that you're interested in.
+
+Schema Registry:
+In the context of Avro serialization, which is commonly used with Kafka, schemas define the structure of the data. 
+The Schema Registry is used to manage and store these schemas separately from the data. 
+When you serialize an Avro object, the schema is usually included in the serialized data. 
+When you deserialize the data, the schema from the Schema Registry is used to ensure the data's integrity and compatibility.
