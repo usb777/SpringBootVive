@@ -1,5 +1,7 @@
 package com.kafka.sbkafka;
 
+// based on https://www.javaguides.net/2022/05/spring-boot-kafka-producer-consumer-example-tutorial.html
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
