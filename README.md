@@ -7,4 +7,5 @@ Tools: Maven, Actuator, Database
 KAfka
 Stream Api
 samples and examples
+Deserialisation-serialisation [Kafka and Java]
 
