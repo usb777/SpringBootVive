@@ -1,6 +1,8 @@
+
+==========================Linux Ubuntu======================================
 Install==
 https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-20-04/
-
+============================================================================
 
 
 systemctl daemon-reload
@@ -26,3 +28,10 @@ listener
 
 sudo bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopic --from-beginning
 sudo bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic secondTopic --from-beginning
+
+
+
+
+
+
+
