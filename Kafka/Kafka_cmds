@@ -5,6 +5,8 @@ https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-20-04/
 ============================================================================
 
 
+==========================Work with Kafka===================================
+
 systemctl daemon-reload
 sudo systemctl start zookeeper
 sudo systemctl start kafka
