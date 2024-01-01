@@ -1,5 +1,7 @@
 package com.sha.serverproductmanagement.config;
 
+import com.sha.serverproductmanagement.jwt.JWTAuthorizationFilter;
+import com.sha.serverproductmanagement.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +20,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
     @Autowired
     UserDetailsService userDetailsService;
 
@@ -42,6 +46,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // We will handle it later
                 // Cross side request forgery
                 .csrf().disable();
+        
+        //jwt filter
+        http.addFilter(new JWTAuthorizationFilter(authenticationManager(), jwtTokenProvider));
     }
 
     @Override
