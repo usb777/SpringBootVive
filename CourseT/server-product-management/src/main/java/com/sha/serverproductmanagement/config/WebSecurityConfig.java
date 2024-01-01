@@ -46,7 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // We will handle it later
                 // Cross side request forgery
                 .csrf().disable();
-        
+
         //jwt filter
         http.addFilter(new JWTAuthorizationFilter(authenticationManager(), jwtTokenProvider));
     }

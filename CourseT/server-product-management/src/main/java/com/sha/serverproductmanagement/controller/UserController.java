@@ -1,6 +1,7 @@
 package com.sha.serverproductmanagement.controller;
 
 
+import com.sha.serverproductmanagement.jwt.JwtTokenProvider;
 import com.sha.serverproductmanagement.model.Role;
 import com.sha.serverproductmanagement.model.Transaction;
 import com.sha.serverproductmanagement.model.User;
@@ -10,6 +11,8 @@ import com.sha.serverproductmanagement.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
@@ -17,6 +20,9 @@ import java.time.LocalDateTime;
 
 @RestController
 public class UserController {
+
+    @Autowired
+    JwtTokenProvider tokenProvider;
 
     @Autowired
     private UserService userService;
@@ -38,14 +44,18 @@ public class UserController {
     }
 
     @GetMapping("/api/user/login")
-    public ResponseEntity<?> getUser(Principal principal){
+    public ResponseEntity<?> getUser(Principal principal) {
         //principal = httpServletRequest.getUserPrincipal.
-        if(principal == null){
+        if (principal == null) {
             //logout will also use here so we should return ok http status.
             return ResponseEntity.ok(principal);
         }
+        UsernamePasswordAuthenticationToken authenticationToken = (UsernamePasswordAuthenticationToken) principal;
+        User user = userService.findByUsername(authenticationToken.getName());
+        Authentication authentication = authenticationToken;
+        user.setToken(tokenProvider.generateToken(authenticationToken));
 
-        return new ResponseEntity<>(userService.findByUsername(principal.getName()), HttpStatus.OK);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
 
