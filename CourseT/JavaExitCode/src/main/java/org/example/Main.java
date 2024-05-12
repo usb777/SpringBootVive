@@ -8,6 +8,26 @@ public class Main {
         System.out.println("Argument count: " + args.length);
         for (int i = 0; i < args.length; i++) {
             System.out.println("Argument " + i + ": " + args[i]);
+
+            if (args[i].equals("exit1"))
+            {
+                System.out.println("exit1");
+                System.exit(1);
+            }
+            else if (args[i].equals("exit5"))
+            {
+                System.out.println("exit5");
+                System.exit(5);
+            }
+            else if (args[i].equals("exit10"))
+            {
+                System.out.println("exit10");
+                System.exit(10);
+            }
+
         }
+
+
+
     }
 }
