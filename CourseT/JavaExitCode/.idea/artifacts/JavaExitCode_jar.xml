@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaExitCode:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaExitCode_jar</output-path>
+    <root id="archive" name="JavaExitCode.jar">
+      <element id="module-output" name="JavaExitCode" />
+      <element id="module-test-output" name="JavaExitCode" />
+    </root>
+  </artifact>
+</component>
