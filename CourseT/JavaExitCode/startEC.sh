@@ -1,6 +1,6 @@
 echo "Dzimon"
 
-java -jar target/JavaExitCode-1.0-jar-with-dependencies.jar  exit exit5
+java -jar target/JavaExitCode-1.0-jar-with-dependencies.jar  exit exit10
 
 exitCode=$?
 
