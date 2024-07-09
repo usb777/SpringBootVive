@@ -1,8 +1,10 @@
 # SpringBootVive 
-contains JAVA8 SpringBOOT
+
 revive exploring of SpringBoot based on Leurning by Codinng
 
 Spring MVC, SPRINGBOOT and Security
+
+
 
 Tools: Maven, Actuator, Database
 KAfka
@@ -15,8 +17,8 @@ SpringBoot samples
 
 ======================================
 Added TutorialSpoint course  - SpringBoot + React
-
-
+=================================
+contains JAVA8 SpringBOOT
 
 ================SpringBoot 2.7 -Java8===================
 https://stackoverflow.com/questions/77604546/spring-initiliser-available-java-versions
