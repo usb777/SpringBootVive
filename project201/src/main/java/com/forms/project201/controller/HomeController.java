@@ -25,6 +25,11 @@ public class HomeController {
 		model.addAttribute("loginval", login);
 		return "confirm";
 	}
+
+	@RequestMapping("/about")
+	public String aboutPage(){
+			return "about";
+			}
 	
 	
 
