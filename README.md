@@ -20,7 +20,8 @@ Added TutorialSpoint course  - SpringBoot + React
 =================================
 contains JAVA8 SpringBOOT
 
-================SpringBoot 2.7 -Java8===================
+================SpringBoot 2.7 -Java8 -- ===================
+Use Spring.io initialize, them fix new changes.
 https://stackoverflow.com/questions/77604546/spring-initiliser-available-java-versions
 
 <parent>
