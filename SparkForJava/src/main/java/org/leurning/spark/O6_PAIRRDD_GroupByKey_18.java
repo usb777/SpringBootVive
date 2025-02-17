@@ -1,5 +1,6 @@
 package org.leurning.spark;
 
+import com.google.common.collect.Iterables;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
@@ -25,10 +26,16 @@ public class O6_PAIRRDD_GroupByKey_18 {
         SparkConf conf = new SparkConf().setAppName("startingSpark").setMaster("local[*]");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
+//        sc.parallelize(inputData)
+//                .mapToPair(rawValue -> new Tuple2<>(rawValue.split(":")[0], 1L))
+//                .reduceByKey((value1, value2) -> value1 + value2)
+//                .foreach(tuple -> System.out.println(tuple._1 + " has " + tuple._2 + " instances"));
+        //groupByKey
         sc.parallelize(inputData)
                 .mapToPair(rawValue -> new Tuple2<>(rawValue.split(":")[0], 1L))
-                .reduceByKey((value1, value2) -> value1 + value2)
-                .foreach(tuple -> System.out.println(tuple._1 + " has " + tuple._2 + " instances"));
+                .groupByKey()
+                .foreach(tuple -> System.out.println(tuple._1 + " has " + Iterables.size(tuple._2) + " instances"));
+
 
         sc.close();
     }
