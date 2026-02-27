@@ -1,5 +1,6 @@
 package com.forms.project201.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,10 +8,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
+
+	@Value("${dda.event.enabled:false}")
+	private boolean startstop;
 	
 	@RequestMapping("/")
 	public String homePage() {
-		return "index";
+         if (startstop) {return "index";}
+		 else return "about";
+
 	}
 	
 	@RequestMapping("/loadform")
